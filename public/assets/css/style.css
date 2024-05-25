@@ -55,6 +55,29 @@ button {
     border-radius: 8px;
 }
 /* WEB CSS */
-@media (min-width: 400px){
+@media (min-width: 700px){
+    #header2 {
+        display: flex;
+    }
 
+    nav {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+    }
+
+    nav li {
+        display: inline-block;
+        margin: 0 40px;
+    }
+
+    nav a {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+    }
 }
