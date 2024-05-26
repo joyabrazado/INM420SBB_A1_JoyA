@@ -6,8 +6,13 @@ body, html {
 }
 
 body{
-    background-color: black;
+    background-image: url(../media/bg.png);
+    background-size: 70%;
+    background-position: right top;
+    background-repeat: no-repeat;
 }
+
+/* SECTION 1 - HEADER */
 
 header{
     background-color: white;
@@ -16,10 +21,17 @@ header{
     align-items: center;
     padding: 16px;
     height: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* hide logo in mobile */
+header img {
+    display: none;
 }
 
 #header1 {
-    display: inline-flex;
+    display: flex;
+    align-items: center;
 }
 
 path {
@@ -34,9 +46,12 @@ header h1 {
     font-weight: 700;
     font-size: 24px;
     color: #5C5C5C;
+    margin: 0;
 }
+
 #hamburger {
-    align-content: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
@@ -53,9 +68,166 @@ button {
     font-weight: 700;
     font-size: 18px;
     border-radius: 8px;
+    border: none;
+    box-shadow: none;
+    outline: none;
 }
+
+button:hover {
+    background-color: #3e4547;
+}
+
+/* SECTION 2 - DELIVERING */
+#delivering {
+    margin: 0 22px;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+h2{
+    color: #2D3436;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+#intro{
+    padding: 16px;
+}
+
+#intro p{
+    color: #2D3436;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+
+#fourcolumns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+    color: #5C5C5C;
+}
+
+#fourcolumns img{
+    height: 48px;
+}
+
+.column {
+    padding: 16px;
+    text-align: center;
+    border-radius: 8px;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.column h3{
+    color: #2D3436;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.column p{
+    color: #5C5C5C;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 13.5px;
+    line-height: 24px;
+}
+
+.column button  {
+        width: 109.5px;
+        height: 36px;
+        background-color: transparent;
+        color: #6C5CE7;
+        font-family: "Inter", sans-serif;
+        font-weight: bold;
+        font-size: 13.5px;
+        border-radius: 16px;
+        border: solid 1px #ADADAD;
+        box-shadow: none;
+        outline: none;
+        position: absolute;
+        bottom: 10;
+}
+
+.column button:hover {
+    background-color: #6C5CE7;
+    color: white;
+}
+
+/* SECTION 3 - FOOTER */
+
+#copyright{
+    text-align: center;
+    color: #2D3436;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+#website{
+    text-align: center;
+    color: #00B894;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+#website h4{
+    text-align: center;
+    color: #6C5CE7;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+#socmed{
+    display: flex;
+    justify-content: center;
+}
+
+footer img{
+    width: 100%;
+    bottom: 0;
+}
+
 /* WEB CSS */
 @media (min-width: 700px){
+
+    /* 1 */
+
+    header {
+        height: 64px;
+        justify-content: space-around;
+    }
+
+    #hamburger{
+        display: none;
+    }
+
+    header img{
+        display: flex;
+        height: 30px;
+        margin-right: 12px;
+    }
+
+    header h1 {
+        font-family: "Inter", sans-serif;
+        font-weight: bold;
+        font-size: 40px;
+        color: #2D3436;
+    }
+
     #header2 {
         display: flex;
     }
@@ -68,6 +240,8 @@ button {
 
     nav ul {
         list-style-type: none;
+        margin: 0;
+        padding: 0;
     }
 
     nav li {
@@ -79,5 +253,69 @@ button {
         font-family: "Inter", sans-serif;
         font-weight: 400;
         font-size: 18px;
+        text-decoration: none;
+        color: #6C5CE7;
+    }
+
+    nav a:hover {
+        font-weight: bold;
+        color: #2D3436;
+    }
+
+    header button{
+        height: 64px;
+        width: 170px;
+        border-radius: 32px;
+        font-size: 24px;
+    }
+
+    /* 2 */
+
+    h2{
+        font-size: 32px;
+        line-height: 48px;
+    }
+    
+    #delivering{
+        padding: 0 30px;
+    }
+    
+    #intro p{
+        font-size: 24px;
+        line-height: 36px;
+    }
+    
+    .column h3{
+        font-size: 24px;
+        line-height: 36px;
+    }
+    
+    .column p{
+        color: #2D3436;
+        font-size: 18px;
+        line-height: 32px;
+    }
+    
+    #fourcolumns {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .column{
+        margin-bottom: 32px;
+    }
+    
+    .column button{
+        bottom: 0;
+        width: 146px;
+        height: 48px;
+        color: #6C5CE7;
+        font-size: 18px;
+        border-radius: 20px;
+    }
+
+    /* 3 */
+
+    footer{
+        padding-top: 40px;
     }
 }
