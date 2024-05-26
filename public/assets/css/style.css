@@ -114,7 +114,7 @@ h2{
 }
 
 #fourcolumns img{
-    height: 48px;
+    height: 40px;
 }
 
 .column {
@@ -298,6 +298,10 @@ footer img{
     
     #fourcolumns {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    #fourcolumns img{
+        height: 48px;
     }
 
     .column{
